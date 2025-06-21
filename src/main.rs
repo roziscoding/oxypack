@@ -17,7 +17,7 @@ fn main() -> Result<()> {
     let args = Oxypack::parse();
 
     match &args.commands {
-        Some(CommandList::Init { name }) => commands::init::execute(name),
+        Some(CommandList::Init { name, description }) => commands::init::execute(name, description),
         None => Ok(()),
     }
 }
